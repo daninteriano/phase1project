@@ -35,6 +35,12 @@ function addManga(event){
     mangaList.appendChild(mangaDiv);
     //Clear Manga Input value
       mangaInput.value = "";
+      //Event Listener for Delete Button to Remove card from DOM
+    deleteButton.addEventListener("click", () => {
+        mangaDiv.remove();
+    })
+    //Event Listener for Complete Button to symbolize Manga Title being READ, and now to Rate
+    completedButton.addEventListener("click", createStarRating)
 }
 //Creating Event Listener for Complete Button to trigger Star Rating Function
 
