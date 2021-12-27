@@ -2,10 +2,12 @@
 const mangaInput = document.querySelector(".manga-input");
 const mangaInputButton = document.querySelector(".input-btn");
 const mangaList = document.querySelector(".manga-list");
+const completeButton = document.querySelector('.complete-btn');
 
 //Event Listeners
 document.addEventListener("DOMContentLoaded", function() {
     mangaInputButton.addEventListener('click', addManga);
+    //completeButton.addEventListener('click', createStars);
     console.log("The DOM has loaded");
   });
 //Functions
@@ -36,24 +38,39 @@ function addManga(event){
 }
 //Creating Event Listener for Complete Button to trigger Star Rating Function
 
-document.querySelector('.complete-btn').addEventListener('click', createStars);
 
-//Creating Stars
-function createStars(event){
-    event.preventDefault();
 
-    //Creating Stars
-    const starsContainer = document.createElement('div');
-    starsContainer.classList.add('star-ratings')
-    starsContainer.innerHTML = `
+function createStarRating(){
+    const starWrapper = document.querySelector(".stars");
+    //Variable to grab All of the Stars
+    const allStars = document.querySelectorAll('.stars i');
+    //Create Div containter for All of the Stars
+    const stars = document.createElement('div');
+    stars.className = 'stars'
+    //Creating Each of the Stars
+    stars.innerHTML = `
+    <h4>Rating</h4>
     <i class="fas fa-star"></i>
+    <i class="fas fa-star"></i> 
+    <i class="fas fa-star"></i> 
+    <i class="fas fa-star"></i> 
     <i class="fas fa-star"></i>
-    `;
-    //Append Stars to the DOM onto the Manga-Title
-    document.querySelector('.manga-div').appendChild(starsContainer)
-    console.log(starsContainer)
-
-}
+    `
+    document.querySelector('.manga-title').appendChild(stars);
+    
+    //Event Listener for Stars to be clicked for Rating
+    allStars.forEach((star, clickedIndex) => {
+      star.addEventListener('click', () => {
+         starWrapper.classList.add("disabled")
+             allStars.forEach((otherStar, otherIndex) => {
+               if(otherIndex <= clickedIndex){
+                     otherStar.classList.add("active");
+                 }
+             })
+            console.log(`Star of index ${clickedIndex + 1} was clicked!`)
+        })
+     })
+     }
 //Creating DeleteButton to remove AddedManga from the DOM
 
 
