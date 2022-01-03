@@ -7,7 +7,7 @@ const completeButton = document.querySelector('.complete-btn');
 //Event Listeners
 document.addEventListener("DOMContentLoaded", function() {
     mangaInputButton.addEventListener('click', addManga);
-    //completeButton.addEventListener('click', createStars);
+    
     console.log("The DOM has loaded");
   });
 //Functions
@@ -17,11 +17,13 @@ function addManga(event){
     const mangaDiv = document.createElement('div');
     mangaDiv.classList.add('manga-div');
     //Create Li
+    debugger;
     const addedManga = document.createElement('li');
     addedManga.innerText = mangaInput.value;
     addedManga.classList.add('manga-title');
     mangaDiv.appendChild(addedManga);
     //Check Mark Button
+    debugger;
     const completedButton = document.createElement('button');
     completedButton.innerHTML = '<i class="fas fa-check" ></i>';
     completedButton.classList.add("complete-btn");
@@ -40,16 +42,15 @@ function addManga(event){
         mangaDiv.remove();
     })
     //Event Listener for Complete Button to symbolize Manga Title being READ, and now to Rate
-    completedButton.addEventListener("click", createStarRating)
+    completedButton.addEventListener("click", createStarRating);
 }
-//Creating Event Listener for Complete Button to trigger Star Rating Function
-
 
 
 function createStarRating(){
     const starWrapper = document.querySelector(".stars");
     //Variable to grab All of the Stars
     const allStars = document.querySelectorAll('.stars i');
+    debugger;
     //Create Div containter for All of the Stars
     const stars = document.createElement('div');
     stars.className = 'stars'
@@ -62,7 +63,11 @@ function createStarRating(){
     <i class="fas fa-star"></i> 
     <i class="fas fa-star"></i>
     `
-    document.querySelector('.manga-title').appendChild(stars);
+    debugger;
+    //document.querySelector('.manga-title').appendChild(stars);
+  
+    document.getElementsByClassName('manga-title').appendChild(stars);
+    debugger;
     
     //Event Listener for Stars to be clicked for Rating
     allStars.forEach((star, clickedIndex) => {
@@ -77,12 +82,12 @@ function createStarRating(){
         })
      })
      }
-//Creating DeleteButton to remove AddedManga from the DOM
+
 
 
 //Fetch Data
 function getData(){
-fetch('https://kitsu.io/api/edge/anime',{
+fetch(' https://danbooru.donmai.us/profile.json?api_key=wFUJdgPgByq54WpWambRDtkd&login=danielriano',{
     //'Accept': application/vnd.api+json,
     //'Content-Type': application/vnd.api+json
 })
