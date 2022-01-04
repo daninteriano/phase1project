@@ -42,11 +42,12 @@ function addManga(event){
         mangaDiv.remove();
     })
     //Event Listener for Complete Button to symbolize Manga Title being READ, and now to Rate
-    completedButton.addEventListener("click", createStarRating(event));
+    completedButton.addEventListener("click", createStarRating);
 }
 
 
-function createStarRating(event){
+function createStarRating(){
+    
     //Create Div containter for All of the Stars
     const stars = document.createElement('div');
     stars.className = 'stars'
@@ -62,11 +63,13 @@ function createStarRating(event){
     debugger;
     //Variable to grab All of the Stars
     const allStars = document.querySelectorAll('.stars i');
-    //document.querySelector('.manga-title').appendChild(stars);
+    const starWrapper = document.querySelector(".stars");
     debugger;
-    event.target.appendChild(stars);
+    //document.querySelector('.manga-title').appendChild(stars);
+    document.getElementsByClassName('manga-title').appendChild(stars);
     
     
+    debugger;
     //Event Listener for Stars to be clicked for Rating
     allStars.forEach((star, clickedIndex) => {
       star.addEventListener('click', () => {
@@ -84,14 +87,9 @@ function createStarRating(event){
 
 
 //Fetch Data
-function getData(){
-fetch(' https://danbooru.donmai.us/profile.json?api_key=wFUJdgPgByq54WpWambRDtkd&login=danielriano',{
-    //'Accept': application/vnd.api+json,
-    //'Content-Type': application/vnd.api+json
-})
-
+function getManga(){
+fetch('http://localhost:3000/mangaData')
     .then(res => res.json())
-    //.then(res => res.text())
 .then(data => console.log(data))
 
 }
