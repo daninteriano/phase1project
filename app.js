@@ -3,13 +3,15 @@ const mangaInput = document.querySelector(".manga-input");
 const mangaInputButton = document.querySelector(".input-btn");
 const mangaList = document.querySelector(".manga-list");
 const completeButton = document.querySelector('.complete-btn');
-
+//const mangasTitle = document.querySelector('.manga-title');
 //Event Listeners
 document.addEventListener("DOMContentLoaded", function() {
     mangaInputButton.addEventListener('click', addManga);
     
     console.log("The DOM has loaded");
   });
+
+
 //Functions
 function addManga(event){
     event.preventDefault();
@@ -23,7 +25,6 @@ function addManga(event){
     addedManga.classList.add('manga-title');
     mangaDiv.appendChild(addedManga);
     //Check Mark Button
-   
     const completedButton = document.createElement('button');
     completedButton.innerHTML = '<i class="fas fa-check" ></i>';
     completedButton.classList.add("complete-btn");
@@ -42,8 +43,11 @@ function addManga(event){
         mangaDiv.remove();
     })
     //Event Listener for Complete Button to symbolize Manga Title being READ, and now to Rate
-    completedButton.addEventListener("click", createStarRating);
+    completedButton.addEventListener("click", function(){
+        return createStarRating
+    });
 }
+
 
 
 function createStarRating(){
@@ -60,13 +64,14 @@ function createStarRating(){
     <i class="fas fa-star"></i> 
     <i class="fas fa-star"></i>
     `
+    //document.querySelector('.manga-title').appendChild(stars);
+    document.querySelectorAll("li.manga-title").forEach(title => title.appendChild(stars));
     debugger;
     //Variable to grab All of the Stars
     const allStars = document.querySelectorAll('.stars i');
     const starWrapper = document.querySelector(".stars");
     debugger;
-    //document.querySelector('.manga-title').appendChild(stars);
-    document.getElementsByClassName('manga-title').appendChild(stars);
+    
     
     
     debugger;
