@@ -36,29 +36,41 @@ form button:hover{
     background: #d88771;
     color: white;
 }
+.pict {
+    height: 100px;
+    width: 100px;
+    margin: 5px;
+
+}
 .manga-container {
     display: flex;
-    justify-content: center;
-    align-items: center;
 }
-.manga-div {
-    margin: 1.5rem;
-    background: rgb(34, 158, 172);
+.manga-list {
+    margin: 1rem;
+    padding: 10px;
+    border: 20px;
+    background: rgb(226, 167, 58);
     color: black;
-    font-size: 1.5rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center; 
-    border-radius: 8px;   
+    font-size: 2.5rem;
 }
+.manga-title {
+    
+    align-items: center;
+    display:flex;
+    font-size: 1.5rem;
+    border: 10px, solid brown;
+    padding: 20px;
+    margin: 30px;
+    /*align-items: center;*/
 
+}
 .delete-btn, .complete-btn {
     background: #ff6f47;
     color: rgb(230, 226, 226);
     border: none;
     padding: 1rem;
     cursor: pointer;
-    font-size: 1rem;
+    font-size: 1.5rem;
     border-radius: 8px;
   
 }
@@ -68,11 +80,15 @@ form button:hover{
     justify-content: right;
 }
 #text {
-    padding: 1rem;
+    padding: 5px;
+    border: inherit;
 }
 
 .stars {
     display: flex;
+    justify-content: center;
+    align-items: center;
+
 }
 .stars.disabled {
     pointer-events: none;

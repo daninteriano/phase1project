@@ -18,6 +18,8 @@ function addManga(event){
     //Create Li
     const addedManga = document.createElement('li');
     addedManga.innerText = mangaInput.value;
+    addedManga.innerHTML += `
+    <img src="https://m.media-amazon.com/images/M/MV5BODcwNWE3OTMtMDc3MS00NDFjLWE1OTAtNDU3NjgxODMxY2UyXkEyXkFqcGdeQXVyNTAyODkwOQ@@._V1_.jpg" class="pict"> `
     addedManga.classList.add('manga-title');
     mangaList.appendChild(addedManga);
     //Check Mark Button
@@ -30,24 +32,19 @@ function addManga(event){
     deleteButton.innerHTML = '<i class="fas fa-trash" ></i>';
     deleteButton.classList.add("delete-btn");
     addedManga.appendChild(deleteButton); 
-    //Append to List
-    //mangaList.appendChild(mangaDiv);
     //Clear Manga Input value
       mangaInput.value = "";
       //Event Listener for Delete Button to Remove card from DOM
     deleteButton.addEventListener("click", () => {
-       // mangaDiv.remove();
+        addedManga.remove();
     })
     //Event Listener for Complete Button to symbolize Manga Title being READ, and now to Rate
-    completedButton.addEventListener("click", function(){
-        return createStarRating
-    });
+    completedButton.addEventListener("click", createStarRating);
 }
 
 
 
 function createStarRating(){
-    
     //Create Div containter for All of the Stars
     const stars = document.createElement('div');
     stars.className = 'stars'
@@ -60,17 +57,12 @@ function createStarRating(){
     <i class="fas fa-star"></i> 
     <i class="fas fa-star"></i>
     `
-    //document.querySelector('.manga-title').appendChild(stars);
-    document.querySelectorAll("li.manga-title").forEach(title => title.appendChild(stars));
-    debugger;
+    //Appending the Stars onto the DOM
+    document.querySelectorAll('li.manga-title').forEach(title => title.appendChild(stars));
+    
     //Variable to grab All of the Stars
     const allStars = document.querySelectorAll('.stars i');
     const starWrapper = document.querySelector(".stars");
-    debugger;
-    
-    
-    
-    debugger;
     //Event Listener for Stars to be clicked for Rating
     allStars.forEach((star, clickedIndex) => {
       star.addEventListener('click', () => {
