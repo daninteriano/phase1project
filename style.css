@@ -36,6 +36,12 @@ form button:hover{
     background: #d88771;
     color: white;
 }
+li {
+    border: solid;
+    border-width: 5px;
+    border-radius: 8px;
+    border-color: rgb(243, 146, 34);
+}
 .pict {
     height: 100px;
     width: 100px;
@@ -45,12 +51,15 @@ form button:hover{
 .manga-container {
     display: flex;
     max-width: inherit;
-
+    /* align-items: center; */
+    border: 10px, coral;
+    justify-content: center;
 }
 .manga-list {
-    margin: 5px;
-    padding: 5px;
-    border: 5px;
+    margin: 1px;
+    padding: 1px;
+    border: 1px;
+    border-radius: 8px;
     background: rgb(226, 167, 58);
     color: black;
     font-size: 2.5rem;
@@ -63,7 +72,7 @@ form button:hover{
     border: 5px, solid brown;
     padding: 5px;
     margin: 5px;
-    /*align-items: center;*/
+    
 
 }
 .delete-btn, .read-btn {
@@ -74,23 +83,21 @@ form button:hover{
     cursor: pointer;
     font-size: 1.5rem;
     border-radius: 8px;
-  
+    position: relative;
+    float: right;
 }
 .read-btn {
     background: rgb(57, 162, 57);
-    position: inherit;
-    justify-content: right;
 }
 #text {
     padding: 5px;
-    border: inherit;
 }
 
 .stars {
     display: flex;
     justify-content: center;
     align-items: center;
-
+    position: relative;
 }
 .stars.disabled {
     pointer-events: none;

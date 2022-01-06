@@ -9,20 +9,17 @@ mangaInputButton.addEventListener('click', function(event){
     return addManga(event);
 });
 
-const readButton = document.querySelector("button.read-btn");
-
-
 //Functions
 function addManga(event){
     event.preventDefault();
-    //Create Li
+    //Create Li for Manga
     const addedManga = document.createElement('li');
     addedManga.innerText = mangaInput.value;
     addedManga.innerHTML += `
     <img src="https://m.media-amazon.com/images/M/MV5BODcwNWE3OTMtMDc3MS00NDFjLWE1OTAtNDU3NjgxODMxY2UyXkEyXkFqcGdeQXVyNTAyODkwOQ@@._V1_.jpg" class="pict"> `
     addedManga.classList.add('manga-title');
     mangaList.appendChild(addedManga);
-    //Check Mark Button
+    //Read Mark Button
     const readButton = document.createElement('button');
     readButton.innerHTML = '<i class="fas fa-check" ></i>';
     readButton.classList.add("read-btn");
@@ -44,8 +41,6 @@ function addManga(event){
         return createStarRating(event);
        })
 }
-
-
 //this event is the Input button Event, i need the completedButton Event
 function createStarRating(event){
     //Create Div containter for All of the Stars
@@ -60,14 +55,8 @@ function createStarRating(event){
     <i class="fas fa-star"></i> 
     <i class="fas fa-star"></i>
     `
-    //Appending the Stars onto the DOM
-    //document.querySelectorAll('li.manga-title').forEach(title => title.appendChild(stars));
-    
     //Using the event to specifically select which <li> i want to append the stars too
-    //console.log(event.target)
     event.target.appendChild(stars);
-
-
     //Variable to grab All of the Stars
     const allStars = document.querySelectorAll('.stars i');
     const starWrapper = document.querySelector(".stars");
