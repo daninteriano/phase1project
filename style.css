@@ -7,7 +7,7 @@ body{
     background-image: linear-gradient(120deg, #ceb253, #d88771);
     color: white;
     font-family: 'Merriweather', serif;
-    min-height: 100vh;
+    
 }
 header{
     font-size: 50px;
@@ -40,25 +40,20 @@ h4 {
     font-size: 10px;
 }
 li {
-    border: solid;
-    border-width: 5px;
+    border: solid 5px rgb(243, 146, 34);
     border-radius: 8px;
-    border-color: rgb(243, 146, 34);
-    display: flex;
     align-items: center;
 }
 .pict {
     height: 100px;
-    width: 100px;
-    margin: 5px;
-
+    width: 130px;
+    margin: 15px;
 }
 .manga-container {
-    display: flex;
-    max-width: inherit;
     justify-content: center;
 }
 .manga-list {
+    max-width: 80%;
     margin: 1px;
     padding: 1px;
     border: 1px;
@@ -89,8 +84,7 @@ li {
     background: rgb(57, 162, 57);
 }
 #text {
-    padding: 15px;
-    text-transform: uppercase;
+    padding: 35px;
 }
 
 .stars {

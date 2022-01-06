@@ -54,6 +54,27 @@
             "imageURL": "https://animenewsandfacts.com/wp-content/uploads/2020/10/Kaiju-No.-8-manga-Chapter.jpg",
             "description": "In a Japan that gets regularly attack by monsters known as Kaijus, Kafka Hibino with dreams of joining the defense force to protect people, one day finds he becomes one himself. Written and illustrated by Naoya Matsumoto.",
             "rating":""
+        }, 
+        {
+            "name": "Fairy Tail",
+            "imageURL": "https://www.siliconera.com/wp-content/uploads/2021/09/fairytail.jpg",
+            "description": "The story follows the adventures of Natsu Dragneel a member fo the popular wizard guild Fairy Tail. Written and illustrated by Hiro Mashima.",
+            "rating":""
+        },
+        {
+            "name": "Soul Eater",
+            "imageURL": "https://www.whats-on-netflix.com/wp-content/uploads/2021/11/soul-eater-leaving-netflix-december-2021.jpg",
+            "description": "Set at the Death Weapon Meister Academy, the series revolves around three teams, each consisting of a weapon meister and (at least one) weapon that can transform into a humanoid. "
+        }, 
+        {
+            "name": "Boruto",
+            "imageURL": "https://www.devdiscourse.com/remote.axd?https://devdiscourse.blob.core.windows.net/devnews/08_04_2021_12_46_13_6391913.jpg?width=1280",
+            "description": "A spinoff and sequel to Kisimoto's Naruto, it follow the exploits of Boruto Uzumaki and his ninja team."
+        }, 
+        {
+            "name": "Dandadan",
+            "imageURL": "https://www.otaquest.com/wp-content/uploads/2021/06/662ba620777119ce62e2e29ec8b6ad6c5dcfc146_s2_n1-1024x614.png",
+            "description": "Momo Ayase is a high school girl who believes in ghosts but not aliens, while her classmate Okarun believes in aliens but not ghosts."
         }
 
     ]
