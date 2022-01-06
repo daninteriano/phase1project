@@ -16,13 +16,7 @@ mangaInputButton.addEventListener('click', function(event){
 //Rendering ImgURLs from db.json onto the DOM under 
 //appropriate manga title
 //Fetch Data
-function getMangaImages(arrayObject){
-    const rightObject = arrayObject.filter((object) => object.name === mangaInput.value)
-    debugger;
-    console.log(rightObject[imageURL]);
-    //  addedManga.innerHTML += `
-    // <img src="${data[0].imageURL}" class="pict">` 
-}
+
 
 //Functions
 function addManga(event, data){
@@ -33,6 +27,13 @@ function addManga(event, data){
     addedManga.classList.add('manga-title');
     mangaList.appendChild(addedManga);
     //Creating a function to take the Data and append to DOM
+    function getMangaImages(data){
+        //Variable to 
+        const rightObject = data.filter((object) => object.name === mangaInput.value);
+        //console.log(rightObject[0]["imageURL"]);
+        addedManga.innerHTML += `
+        <img src="${rightObject[0]["imageURL"]}" class="pict">` 
+    }
     getMangaImages(data);
     //Read Mark Button
     const readButton = document.createElement('button');
