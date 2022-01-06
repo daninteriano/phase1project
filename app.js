@@ -8,7 +8,6 @@ mangaInputButton.addEventListener('click', function(event){
     fetch('http://localhost:3000/mangaData')
         .then(res => res.json())
     .then(function(data){
-        //debugger;
         addManga(event, data);
     }) 
     return event.preventDefault();
@@ -23,18 +22,22 @@ function addManga(event, data){
     event.preventDefault();
     //Create Li for Manga
     const addedManga = document.createElement('li');
-    addedManga.innerText = mangaInput.value;
+    addedManga.innerText = mangaInput.value
     addedManga.classList.add('manga-title');
     mangaList.appendChild(addedManga);
     //Creating a function to take the Data and append to DOM
     function getMangaImages(data){
-        //Variable to 
-        const rightObject = data.filter((object) => object.name === mangaInput.value);
-        //console.log(rightObject[0]["imageURL"]);
+        //Variable to capture the Data Array Object thats name specifically match the Input Manga Title
+        const rightObject = data.filter((object) => object.name.toUpperCase() === mangaInput.value.toUpperCase());
+        //Adding the IMG and Description onto the DOM using innerHTML
         addedManga.innerHTML += `
-        <img src="${rightObject[0]["imageURL"]}" class="pict">` 
+        <img src="${rightObject[0]["imageURL"]}" class="pict">
+        <li>${rightObject[0]["description"]}</li>
+        ` 
     }
     getMangaImages(data);
+    //Clear Manga Input value
+    mangaInput.value = "";
     //Read Mark Button
     const readButton = document.createElement('button');
     readButton.innerHTML = '<i class="fas fa-check" ></i>';
@@ -45,22 +48,16 @@ function addManga(event, data){
     deleteButton.innerHTML = '<i class="fas fa-trash" ></i>';
     deleteButton.classList.add("delete-btn");
     addedManga.appendChild(deleteButton); 
-    //Clear Manga Input value
-    mangaInput.value = "";
-    //tying to add a photo from the Data parameter to append the Image onto the DOM
-
-
     //Event Listener for Delete Button to Remove card from DOM
     deleteButton.addEventListener("click", () => {
         addedManga.remove();
     })
-    //Event Listener for READ"Complete" Button to symbolize Manga Title being READ, and now to Rate
+    //Event Listener for READ"Complete" Button to symbolize Manga being READ, now Rate
     readButton.addEventListener('click', function starLauncher(event){
         readButton.removeEventListener('click', starLauncher);
         return createStarRating(event);
     })
 }
-//this event is the Input button Event, i need the completedButton Event
 function createStarRating(event){
     //Create Div containter for All of the Stars
     const stars = document.createElement('div');
