@@ -7,8 +7,16 @@ const mangaList = document.querySelector(".manga-list");
 mangaInputButton.addEventListener('click', function(event){
     fetch('http://localhost:3000/mangaData')
         .then(res => res.json())
-    .then(data => console.log(data))   
-    return addManga(event);
+    .then(function(data){
+        debugger;
+        console.log(data)
+        debugger;
+        addManga(event, data);
+    }) 
+    debugger;
+    event.preventDefault();
+    return console.log(event.target);
+    
 });
 //Rendering ImgURLs from db.json onto the DOM under 
 //appropriate manga title
@@ -18,7 +26,7 @@ function getMangaData(){
 }
 
 //Functions
-function addManga(event){
+function addManga(event, data){
     event.preventDefault();
     //Create Li for Manga
     const addedManga = document.createElement('li');
