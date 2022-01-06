@@ -2,14 +2,14 @@
 const mangaInput = document.querySelector(".manga-input");
 const mangaInputButton = document.querySelector(".input-btn");
 const mangaList = document.querySelector(".manga-list");
-const completeButton = document.querySelector('.complete-btn');
-//const mangasTitle = document.querySelector('.manga-title');
+
 //Event Listeners
-document.addEventListener("DOMContentLoaded", function() {
-    mangaInputButton.addEventListener('click', addManga);
-    
-    console.log("The DOM has loaded");
-  });
+mangaInputButton.addEventListener('click', function(event){
+    //console.log(event.target)
+    return addManga(event);
+});
+
+const readButton = document.querySelector("button.read-btn");
 
 
 //Functions
@@ -23,10 +23,10 @@ function addManga(event){
     addedManga.classList.add('manga-title');
     mangaList.appendChild(addedManga);
     //Check Mark Button
-    const completedButton = document.createElement('button');
-    completedButton.innerHTML = '<i class="fas fa-check" ></i>';
-    completedButton.classList.add("complete-btn");
-    addedManga.appendChild(completedButton);
+    const readButton = document.createElement('button');
+    readButton.innerHTML = '<i class="fas fa-check" ></i>';
+    readButton.classList.add("read-btn");
+    addedManga.appendChild(readButton);
     //Delete Button
     const deleteButton = document.createElement('button');
     deleteButton.innerHTML = '<i class="fas fa-trash" ></i>';
@@ -38,13 +38,16 @@ function addManga(event){
     deleteButton.addEventListener("click", () => {
         addedManga.remove();
     })
-    //Event Listener for Complete Button to symbolize Manga Title being READ, and now to Rate
-    completedButton.addEventListener("click", createStarRating);
+    //Event Listener for READ"Complete" Button to symbolize Manga Title being READ, and now to Rate
+    readButton.addEventListener('click', function starLauncher(event){
+        readButton.removeEventListener('click', starLauncher);
+        return createStarRating(event);
+       })
 }
 
 
-
-function createStarRating(){
+//this event is the Input button Event, i need the completedButton Event
+function createStarRating(event){
     //Create Div containter for All of the Stars
     const stars = document.createElement('div');
     stars.className = 'stars'
@@ -58,8 +61,13 @@ function createStarRating(){
     <i class="fas fa-star"></i>
     `
     //Appending the Stars onto the DOM
-    document.querySelectorAll('li.manga-title').forEach(title => title.appendChild(stars));
+    //document.querySelectorAll('li.manga-title').forEach(title => title.appendChild(stars));
     
+    //Using the event to specifically select which <li> i want to append the stars too
+    //console.log(event.target)
+    event.target.appendChild(stars);
+
+
     //Variable to grab All of the Stars
     const allStars = document.querySelectorAll('.stars i');
     const starWrapper = document.querySelector(".stars");

@@ -44,11 +44,13 @@ form button:hover{
 }
 .manga-container {
     display: flex;
+    max-width: inherit;
+
 }
 .manga-list {
-    margin: 1rem;
-    padding: 10px;
-    border: 20px;
+    margin: 5px;
+    padding: 5px;
+    border: 5px;
     background: rgb(226, 167, 58);
     color: black;
     font-size: 2.5rem;
@@ -58,13 +60,13 @@ form button:hover{
     align-items: center;
     display:flex;
     font-size: 1.5rem;
-    border: 10px, solid brown;
-    padding: 20px;
-    margin: 30px;
+    border: 5px, solid brown;
+    padding: 5px;
+    margin: 5px;
     /*align-items: center;*/
 
 }
-.delete-btn, .complete-btn {
+.delete-btn, .read-btn {
     background: #ff6f47;
     color: rgb(230, 226, 226);
     border: none;
@@ -74,7 +76,7 @@ form button:hover{
     border-radius: 8px;
   
 }
-.complete-btn {
+.read-btn {
     background: rgb(57, 162, 57);
     position: inherit;
     justify-content: right;
