@@ -5,9 +5,17 @@ const mangaList = document.querySelector(".manga-list");
 
 //Event Listeners
 mangaInputButton.addEventListener('click', function(event){
-    //console.log(event.target)
+    fetch('http://localhost:3000/mangaData')
+        .then(res => res.json())
+    .then(data => console.log(data))   
     return addManga(event);
 });
+//Rendering ImgURLs from db.json onto the DOM under 
+//appropriate manga title
+//Fetch Data
+function getMangaData(){
+     
+}
 
 //Functions
 function addManga(event){
@@ -15,8 +23,8 @@ function addManga(event){
     //Create Li for Manga
     const addedManga = document.createElement('li');
     addedManga.innerText = mangaInput.value;
-    addedManga.innerHTML += `
-    <img src="https://m.media-amazon.com/images/M/MV5BODcwNWE3OTMtMDc3MS00NDFjLWE1OTAtNDU3NjgxODMxY2UyXkEyXkFqcGdeQXVyNTAyODkwOQ@@._V1_.jpg" class="pict"> `
+    // addedManga.innerHTML += `
+    // <img src="https://m.media-amazon.com/images/M/MV5BODcwNWE3OTMtMDc3MS00NDFjLWE1OTAtNDU3NjgxODMxY2UyXkEyXkFqcGdeQXVyNTAyODkwOQ@@._V1_.jpg" class="pict"> `
     addedManga.classList.add('manga-title');
     mangaList.appendChild(addedManga);
     //Read Mark Button
@@ -63,8 +71,8 @@ function createStarRating(event){
     //Event Listener for Stars to be clicked for Rating
     allStars.forEach((star, clickedIndex) => {
       star.addEventListener('click', () => {
-         starWrapper.classList.add("disabled")
-             allStars.forEach((otherStar, otherIndex) => {
+            starWrapper.classList.add("disabled")
+            allStars.forEach((otherStar, otherIndex) => {
                if(otherIndex <= clickedIndex){
                      otherStar.classList.add("active");
                  }
@@ -76,10 +84,3 @@ function createStarRating(event){
 
 
 
-//Fetch Data
-function getManga(){
-fetch('http://localhost:3000/mangaData')
-    .then(res => res.json())
-.then(data => console.log(data))
-
-}
