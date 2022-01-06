@@ -12,6 +12,15 @@ mangaInputButton.addEventListener('click', function(event){
     }) 
     return event.preventDefault();
 });
+function updateRating(){
+    fetch('http://localhost:3000/mangaData',{
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify()
+    })
+}
 //Rendering ImgURLs from db.json onto the DOM under 
 //appropriate manga title
 //Fetch Data
@@ -78,14 +87,15 @@ function createStarRating(event){
     const starWrapper = document.querySelector(".stars");
     //Event Listener for Stars to be clicked for Rating
     allStars.forEach((star, clickedIndex) => {
-      star.addEventListener('click', () => {
+      star.addEventListener('click', (event) => {
             starWrapper.classList.add("disabled")
             allStars.forEach((otherStar, otherIndex) => {
                if(otherIndex <= clickedIndex){
                      otherStar.classList.add("active");
                  }
              })
-            console.log(`Star of index ${clickedIndex + 1} was clicked!`)
+            console.log(event)
+            console.log(`Rated ${clickedIndex + 1} outta 10!`)
         })
     })
 }
