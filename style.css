@@ -92,14 +92,6 @@ li, p {
     padding: 35px;
 }
 /*Stars Styling Section*/
-.stars {
-    font-size: 10px;
-    display: flex;
-}
-.stars.disabled {
-    pointer-events: none;
-}
- 
 .stars i {
     opacity: 50%;
     cursor: pointer;
@@ -108,14 +100,15 @@ li, p {
 .stars:hover i {
     opacity: 100%; 
 }
-
 .stars i:hover {
     opacity: 100%;
 }
 .stars i:hover ~ i {
     opacity: 50%;
 }
-.star i.active {
+.stars.disabled {
+    pointer-events: none; 
+}
+i.fas.fa-star.active {
     opacity: 100%;
 }
-
