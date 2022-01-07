@@ -68,39 +68,20 @@ function createStarRating(event){
     <i class="fas fa-star"></i>`
     //Using the event to specifically select which <li> i want to append the stars too
     event.target.appendChild(starsDiv);
-
     //Variable to grab All of the Stars
     // const starWrapper = document.querySelector(".stars");
     const stars = document.querySelectorAll('.stars i');
-    
     //Event Listener for Stars to be clicked for Rating
     stars.forEach((star, clickedIndex) => {
       star.addEventListener('click', () => {
-        updateRating(clickedIndex)
+        starsDiv.classList.add("disabled")
         stars.forEach((otherStar, otherIndex) => {
                if(otherIndex <= clickedIndex){
                      otherStar.classList.add("active");
                  }
              });
-            starsDiv.classList.add("disabled")
             console.log(`Rated ${clickedIndex +1} outta 5!`)
         })
     })
 }
 
-
-function updateRating(index){
-    const objectify = {Rating: index}
-    fetch('http://localhost:3000/mangaData',{
-        method: "POST",
-        headers: {
-            //"Accept": "application/json",
-            "Content-Type": "application/json"
-        },
-        body: JSON.stringify(objectify)
-    })
-    .then(res => res.json())
-    .then(data => {console.log(data);
-    })
-    //.catch((error) => {console.error('Error:', error)})
-}
