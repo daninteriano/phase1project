@@ -45,6 +45,18 @@ li, p {
     font-size: 10px;
     display: flex;
 }
+p {
+    order: 2;
+    max-width: 150px;
+    margin: 10px;
+    padding: 5px;
+    
+    
+}
+#text {
+    padding: 35px;
+    
+}
 .pict {
     height: 100px;
     width: 150px;
@@ -54,15 +66,17 @@ li, p {
 .manga-container {
     justify-content: center;
     display: flex;
+    border: none;
 }
 .manga-list {
-    max-width: 80%;
+    max-width: ;
     margin: 1px;
     padding: 1px;
     border: 1px;
     border-radius: 8px;
     background: rgb(226, 167, 58);
     color: rgb(122, 71, 22);
+    justify-content: space-around;
 }
 .manga-title {   
     align-items: center;
@@ -83,14 +97,14 @@ li, p {
     cursor: pointer;
     font-size: 15px;
     border-radius: 8px;
+    order: 3;
+    align-self: flex-end;
     
 }
 .read-btn {
     background: rgb(57, 162, 57);
 }
-#text {
-    padding: 35px;
-}
+
 /*Stars Styling Section*/
 .stars i {
     opacity: 50%;

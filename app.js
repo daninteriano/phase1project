@@ -44,10 +44,12 @@ function addManga(event, data){
     deleteButton.innerHTML = '<i class="fas fa-trash" ></i>';
     deleteButton.classList.add("delete-btn");
     addedManga.appendChild(deleteButton); 
+    
     //Event Listener for Delete Button to Remove card from DOM
     deleteButton.addEventListener("click", () => {
         addedManga.remove();
     })
+    
     //Event Listener for READ"Complete" Button to symbolize Manga being READ, now Rate
     readButton.addEventListener('click', function starLauncher(event){
         readButton.removeEventListener('click', starLauncher);
@@ -80,7 +82,7 @@ function createStarRating(event){
                      otherStar.classList.add("active");
                  }
              });
-            console.log(`Rated ${clickedIndex +1} outta 5!`)
+            // console.log(`Rated ${clickedIndex +1} outta 5!`)
         })
     })
 }
