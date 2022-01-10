@@ -2,11 +2,22 @@
 # Manga Tracker
 
 # Usage
-For users who want to make a list of Manga titles that they want to read, followed by a completed button that will then allow the user to rate the title if they so choose, using a 5 star rating system. Once a user has concluded their enjoyment of the title, they also have an option to remove it at any point in time. 
+For users who want to make a personal list of Manga titles that they want to read or have already read, and want somewhere online to keep it stored.
+The user will simply enter the title of the manga they wish to read into the input field provided. 
+From there a title will be listed below the input field. 
+The title name, an cover image for the title, as well as a pair of button will populate. 
+
+Included in the pair of buttons is a completed button as well as a delete button.
+The compelte button will signify that a title has been read, and will then allow the user to rate the title if they so choose, using a 5 star rating system. 
+Once a user has concluded their enjoyment of the title, they also have an option to remove it at any point in time simply clicking on the delete button.
+
 # Roadmap
+In the future I plan to integrate a sort function for more personalization. Sticking with personalization in mind, a category sorting method that separates the titles by genre will also be a key feature. 
 
 # Support
 Feel free to reach out to me reading any questions or concerns at dannyboyint@gmail.com
+Also refer to my blog on this application for examples on how it is to be used and it's purpose.
+https://medium.com/@dannyboyint/manga-tracker-project-999349eb945a
 
 # Contact
 Daniel Interiano - dannyboyint@gmail.com
