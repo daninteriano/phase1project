@@ -14,7 +14,7 @@ header{
     font-weight: bold;
     padding: 20px 10px;
 }
-header,form{
+header,form {
     min-height: 15vh;
     display: flex;
     justify-content: center;
@@ -26,13 +26,13 @@ form input, form button{
     border: none;
     background: white;
 }
-form button{
+form button {
     color: #d88771;
     background: white;
     cursor: pointer;
     transition: all 0.3s ease;
 }
-form button:hover{
+form button:hover {
     background: #d88771;
     color: white;
 }
@@ -50,8 +50,6 @@ p {
     max-width: 150px;
     margin: 10px;
     padding: 5px;
-    
-    
 }
 #text {
     padding: 35px;

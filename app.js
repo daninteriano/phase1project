@@ -82,7 +82,8 @@ function createStarRating(event){
                      otherStar.classList.add("active");
                  }
              });
-            // console.log(`Rated ${clickedIndex +1} outta 5!`)
+        console.log(event)     
+        //console.log(`Rated ${clickedIndex +1} outta 5!`)
         })
     })
 }
