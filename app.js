@@ -70,20 +70,20 @@ function createStarRating(event){
     <i class="fas fa-star"></i>`
     //Using the event to specifically select which <li> i want to append the stars too
     event.target.appendChild(starsDiv);
+    //debugger;
     //Variable to grab All of the Stars
-    // const starWrapper = document.querySelector(".stars");
     const stars = document.querySelectorAll('.stars i');
     //Event Listener for Stars to be clicked for Rating
     stars.forEach((star, clickedIndex) => {
-      star.addEventListener('click', () => {
-        starsDiv.classList.add("disabled")
-        stars.forEach((otherStar, otherIndex) => {
+        star.addEventListener('click', (event) => {
+            debugger;
+            starsDiv.classList.add("disabled")
+            event.path[1].forEach((otherStar, otherIndex) => {
                if(otherIndex <= clickedIndex){
                      otherStar.classList.add("active");
                  }
-             });
-        console.log(event)     
-        //console.log(`Rated ${clickedIndex +1} outta 5!`)
+             });    
+        console.log(`Rated ${clickedIndex +1} outta 5!`)
         })
     })
 }

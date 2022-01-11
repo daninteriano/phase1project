@@ -118,7 +118,7 @@ p {
 .stars i:hover ~ i {
     opacity: 50%;
 }
-.stars.disabled {
+.stars i.disabled {
     pointer-events: none; 
 }
 i.fas.fa-star.active {
