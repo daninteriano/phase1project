@@ -104,7 +104,10 @@ p {
 }
 
 /*Stars Styling Section*/
-.stars i {
+.stars input{
+    display: none;
+}
+.stars label {
     opacity: 50%;
     cursor: pointer;
     padding: 3px;

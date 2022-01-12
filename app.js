@@ -20,6 +20,10 @@ function addManga(event, data){
     const addedManga = document.createElement('li');
     addedManga.innerText = mangaInput.value
     addedManga.classList.add('manga-title');
+    // addedManga.id = data.filter((object) => {
+    //     object.name === mangaInput.value;
+    //     return object.id
+    //  })
     mangaList.appendChild(addedManga);
     //Creating a function to take the Data and append to DOM
     function getMangaImages(data){
@@ -36,7 +40,7 @@ function addManga(event, data){
     mangaInput.value = "";
     //Read Mark Button
     const readButton = document.createElement('button');
-    readButton.innerHTML = '<i class="fas fa-check" ></i>';
+    readButton.innerText = 'Done';
     readButton.classList.add("read-btn");
     addedManga.appendChild(readButton);
     //Delete Button
@@ -53,38 +57,26 @@ function addManga(event, data){
     //Event Listener for READ"Complete" Button to symbolize Manga being READ, now Rate
     readButton.addEventListener('click', function starLauncher(event){
         readButton.removeEventListener('click', starLauncher);
-        return createStarRating(event);
+        return createStarRating(event, data);
     })
 }
 function createStarRating(event){
-    //Create Div containter for All of the Stars
-    const starsDiv = document.createElement('div');
-    starsDiv.className = 'stars'
+    const buttonsDiv = document.createElement('div');
+    buttonsDiv.className = 'btns'
     //Creating Each of the Stars
-    starsDiv.innerHTML = `
-    <h4>Rating</h4>
-    <i class="fas fa-star"></i>
-    <i class="fas fa-star"></i> 
-    <i class="fas fa-star"></i> 
-    <i class="fas fa-star"></i> 
-    <i class="fas fa-star"></i>`
-    //Using the event to specifically select which <li> i want to append the stars too
-    event.target.appendChild(starsDiv);
-    //debugger;
-    //Variable to grab All of the Stars
-    const stars = document.querySelectorAll('.stars i');
-    //Event Listener for Stars to be clicked for Rating
-    stars.forEach((star, clickedIndex) => {
-        star.addEventListener('click', (event) => {
-            debugger;
-            starsDiv.classList.add("disabled")
-            event.path[1].forEach((otherStar, otherIndex) => {
-               if(otherIndex <= clickedIndex){
-                     otherStar.classList.add("active");
-                 }
-             });    
-        console.log(`Rated ${clickedIndex +1} outta 5!`)
-        })
+    buttonsDiv.innerHTML = `
+    <i class="far fa-heart" id="dislike"></i>
+    <i class="fas fa-thumbs-down"></i>
+    `
+    event.target.appendChild(buttonsDiv);
+    document.querySelector("#dislike").addEventListener('click', function(event){
+        event.target.innerHTML = `
+        <i class="fas fa-heart" id="like"></i>
+        `
     })
-}
 
+}
+    
+//<i class="fas fa-heart" id="like"></i>
+//let eventStars = event.target.childNodes[1].getElementsByTagName("i")
+    //console.log(eventStars);

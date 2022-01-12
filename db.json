@@ -1,67 +1,80 @@
 {
     "mangaData": [
         {
+            "id": 1,
             "name": "One Piece",
             "imageURL": "https://2.bp.blogspot.com/-889-7HVtQCM/XcDi88AGD1I/AAAAAAAAnac/uIdSLLaA3DUwKjPtHgXz3u4lBGTkcuTowCLcBGAsYHQ/w1200-h630-p-k-no-nu/One-Piece-Filler-List-Guide.jpg",
             "description": "A series that follows the story of Monkey D. Luffy on his journey to becoming King of the Pirates, written and illustrated by Eiichiro Oca."
 
         },
         {
+            "id": 2,
             "name": "Bleach",
             "imageURL": "https://m.media-amazon.com/images/S/aplus-media/sota/9c0954ee-ae05-4f77-bb7f-e6572d3c8611.__CR0,0,970,600_PT0_SX970_V1___.jpeg",
             "description": "A series based around Soul Reapers and the demons they face, and how our protagonist Ichigo Kurosaki gets caught up in it, written and illustrated by Tito Kubo."
         },
-        {
+        {   
+            "id": 3, 
             "name": "Naruto",
             "imageURL": "https://3.bp.blogspot.com/-ES8-7q_Hc8Q/XYr3JrjyypI/AAAAAAAAmu0/KUppRKNd7qMRDiwqtHb8DDSTHMWWs_e-wCLcBGAsYHQ/s1600/Naruto_Shippuden_Filler_List.png",
             "description": "A story that follows a young boy Naruto Uzumaki, and his rise to becoming the Hokage of his village, written and illustrated by Masashi Kishimoto."
         },
         {
+            "id": 4,
             "name": "Attack on Titan",
             "imageURL": "https://flxt.tmsimg.com/assets/p10701949_b_v9_ah.jpg",
             "description": "Set in a world where humanity lives inside cities surrounded by three enormous walls that protect them from the gigantic man-eating humanoids referred to as Titans, written and illustrated by Hajime Isayama."
         },
-        {
+        {   
+            "id": 5,
             "name": "Seven Deadly Sins",
             "imageURL": "https://pm1.narvii.com/6918/5259c1d25702f76f1a9bdc9f1d7a1eec0c0a09a7r1-1980-1120v2_hq.jpg",
             "description": "In a setting similar to European Middle Ages, the seven deadly sins are a notorious group that are wanted dead or alive, written and illustrated by Nakaba Suzuki."
         },
         {
+            "id": 6,
             "name": "Jujutsu Kaisen",
             "imageURL": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAH9WmGW0IcM1eDOuDcFzhC0njQrwSox1lYA&usqp=CAU",
             "description": "The story follows high school student Yuji Itadori as he joins a secret organization of Jujutsu Sorcerers in order to kill a powerful Curse named Ryomen Sukuna, of whom Yuji becomes the host. Written and directed by Gege Akutami."
         },
         {
+            "id": 7,
             "name": "Black Clover",
             "imageURL": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbJdBn_HejsgBH4oUn0a5GcDlMvvamJ-s12w&usqp=CAU",
             "description": "The story follows Asta, a young boy born without any magic power. This is unknown to the world he lives in because seemingly everyone has some sort of magic power. written and illustrated by Yuki Tabata."
         },
         {
+            "id": 8,
             "name": "My Hero Academia",
             "imageURL": "https://www.denofgeek.com/wp-content/uploads/2021/03/My-Hero-Academia-Season-5-Opening-Full-Cast.jpg?fit=1200%2C675",
             "description": "The story follows Izuku Midoriya, a boy born without superpowers in in a world where they have become commonplace, but who still dreams of becoming a superhero himself. Written and illustrated by Kohei Horikoshi."
         },
         {
+            "id": 9,
             "name": "Kaiju No 8",
             "imageURL": "https://animenewsandfacts.com/wp-content/uploads/2020/10/Kaiju-No.-8-manga-Chapter.jpg",
             "description": "In a Japan that gets regularly attack by monsters known as Kaijus, Kafka Hibino with dreams of joining the defense force to protect people, one day finds he becomes one himself. Written and illustrated by Naoya Matsumoto."
         }, 
         {
+            "id": 10,
             "name": "Fairy Tail",
             "imageURL": "https://www.siliconera.com/wp-content/uploads/2021/09/fairytail.jpg",
             "description": "The story follows the adventures of Natsu Dragneel a member fo the popular wizard guild Fairy Tail. Written and illustrated by Hiro Mashima."
         },
         {
+            "id": 11,
             "name": "Soul Eater",
             "imageURL": "https://www.whats-on-netflix.com/wp-content/uploads/2021/11/soul-eater-leaving-netflix-december-2021.jpg",
             "description": "Set at the Death Weapon Meister Academy, the series revolves around three teams, each consisting of a weapon meister and (at least one) weapon that can transform into a humanoid. "
         }, 
         {
+            "id": 12,
             "name": "Boruto",
             "imageURL": "https://www.devdiscourse.com/remote.axd?https://devdiscourse.blob.core.windows.net/devnews/08_04_2021_12_46_13_6391913.jpg?width=1280",
             "description": "A spinoff and sequel to Kisimoto's Naruto, it follow the exploits of Boruto Uzumaki and his ninja team."
         }, 
         {
+            "id": 13,
             "name": "Dandadan",
             "imageURL": "https://www.otaquest.com/wp-content/uploads/2021/06/662ba620777119ce62e2e29ec8b6ad6c5dcfc146_s2_n1-1024x614.png",
             "description": "Momo Ayase is a high school girl who believes in ghosts but not aliens, while her classmate Okarun believes in aliens but not ghosts."
