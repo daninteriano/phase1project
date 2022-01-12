@@ -68,11 +68,9 @@ function createRatings(event){
 
     
     buttonsDiv.querySelector("i.far.fa-heart").addEventListener('click', function(event){
-        console.log(event.target)
         event.target.classList.add("disabled");
     })
     buttonsDiv.querySelector("i.far.fa-thumbs-down").addEventListener('click', (event) => {
-        console.log(event.target)
         event.target.classList.add("disabled")
     })
 }

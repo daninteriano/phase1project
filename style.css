@@ -126,23 +126,4 @@ i:hover{
     background-color: rgb(227, 153, 153);
     border-radius: 5px;
 }
-/* .far-thumbs-down{
 
-} */
-/*Stars Styling Section*/
-
-/* .stars:hover i {
-    opacity: 100%; 
-}
-.stars i:hover {
-    opacity: 100%;
-}
-.stars i:hover ~ i {
-    opacity: 50%;
-}
-.stars i.disabled {
-    pointer-events: none; 
-}
-i.fas.fa-star.active {
-    opacity: 100%;
-} */
