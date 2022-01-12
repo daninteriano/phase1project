@@ -57,26 +57,26 @@ function addManga(event, data){
     //Event Listener for READ"Complete" Button to symbolize Manga being READ, now Rate
     readButton.addEventListener('click', function starLauncher(event){
         readButton.removeEventListener('click', starLauncher);
-        return createStarRating(event, data);
+        return createRatings(event, data);
     })
 }
-function createStarRating(event){
+
+function createRatings(event){
     const buttonsDiv = document.createElement('div');
-    buttonsDiv.className = 'btns'
+    buttonsDiv.className = 'ratings'
     //Creating Each of the Stars
     buttonsDiv.innerHTML = `
-    <i class="far fa-heart" id="dislike"></i>
-    <i class="fas fa-thumbs-down"></i>
+    <i class="far fa-heart" id="positive"></i>
+    <i class="far fa-thumbs-down" id="negative"></i>
     `
     event.target.appendChild(buttonsDiv);
-    document.querySelector("#dislike").addEventListener('click', function(event){
-        event.target.innerHTML = `
-        <i class="fas fa-heart" id="like"></i>
-        `
-    })
 
+    document.querySelector("i.far.fa-heart").addEventListener('click', function(event){
+        console.log(event.target)
+        event.target.classList.add("disabled");
+    })
+    document.querySelector("i.far.fa-thumbs-down").addEventListener('click', (event) => {
+        console.log(event.target)
+        event.target.classList.add("disabled")
+    })
 }
-    
-//<i class="fas fa-heart" id="like"></i>
-//let eventStars = event.target.childNodes[1].getElementsByTagName("i")
-    //console.log(eventStars);

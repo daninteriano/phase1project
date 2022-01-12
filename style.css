@@ -101,18 +101,37 @@ p {
 }
 .read-btn {
     background: rgb(57, 162, 57);
+    display: flex;
 }
-
-/*Stars Styling Section*/
-.stars input{
-    display: none;
+.ratings {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 5px;
+    flex-wrap: wrap;
+    
 }
-.stars label {
-    opacity: 50%;
-    cursor: pointer;
+.far-thumbs-down, .far-fa-heart{
     padding: 3px;
+    display: flex;
+    align-self: center;
+    border-radius: 8px;
 }
-.stars:hover i {
+i:hover{
+    background-color: rgb(227, 153, 153);
+    border-radius: 8px;
+}
+.ratings i.disabled{
+    pointer-events: none;
+    opacity: 100%;
+    background-color: rgb(227, 153, 153);
+    border-radius: 5px;
+}
+/* .far-thumbs-down{
+
+} */
+/*Stars Styling Section*/
+
+/* .stars:hover i {
     opacity: 100%; 
 }
 .stars i:hover {
@@ -126,4 +145,4 @@ p {
 }
 i.fas.fa-star.active {
     opacity: 100%;
-}
+} */
