@@ -7,12 +7,12 @@ The user will simply enter the title of the manga they wish to read into the inp
 From there a title will be listed below the input field. 
 The title name, an cover image for the title, as well as a pair of button will populate. 
 
-Included in the pair of buttons is a completed button as well as a delete button.
-The compelte button will signify that a title has been read, and will then allow the user to rate the title if they so choose, using a 5 star rating system. 
+Included in the pair of buttons is a Done button as well as a delete button.
+The Done button will signify that a title has been read, and will then allow the user to rate the title if they so choose, using a simple heart button to signify a positive reaction or a thumbs down showing a negtive reaction to the title.
 Once a user has concluded their enjoyment of the title, they also have an option to remove it at any point in time simply clicking on the delete button.
 
 # Roadmap
-In the future I plan to integrate a sort function for more personalization. Sticking with personalization in mind, a category sorting method that separates the titles by genre will also be a key feature. 
+In the future I plan to integrate a star rating system for more detailed informatoin. With personalization in mind, a category sorting method that separates the titles by genre will also be a key feature. 
 
 # Support
 Feel free to reach out to me reading any questions or concerns at dannyboyint@gmail.com
